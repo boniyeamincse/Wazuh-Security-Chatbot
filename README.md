@@ -247,6 +247,37 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Next.js](https://nextjs.org/) - React framework
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
 
+## Author
+
+**Boni Yeamin** - Fullstack Developer & Cybersecurity Enthusiast
+
+- **GitHub**: [@boniyeamincse](https://github.com/boniyeamincse)
+- **LinkedIn**: [Boni Yeamin](https://linkedin.com/in/boniyeamincse)
+- **Email**: boniyeamincse@gmail.com
+
+## Contributing
+
+We welcome contributions! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### Development Setup
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- **Wazuh Community** - For the excellent open-source SIEM platform
+- **OpenAI** - For providing powerful AI language models
+- **Ollama** - For local LLM serving capabilities
+- **Next.js Team** - For the amazing React framework
+- **Tailwind CSS** - For the utility-first CSS framework
+
 ---
 
 **Note**: This application requires a properly configured Wazuh environment. Ensure you have appropriate security measures in place when deploying to production.
