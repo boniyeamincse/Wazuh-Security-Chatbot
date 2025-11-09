@@ -14,7 +14,7 @@ Before installing the chatbot, ensure you have the following:
 
 ### Quick Prerequisite Installation
 
-#### Ubuntu/Debian
+#### Ubuntu/Debian-based Systems
 ```bash
 # Update system
 sudo apt update && sudo apt upgrade -y
@@ -29,7 +29,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
-#### CentOS/RHEL
+#### RedHat-based Systems (CentOS/RHEL/Fedora)
 ```bash
 # Install Node.js 18+
 curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -

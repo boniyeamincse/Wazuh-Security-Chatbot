@@ -17,7 +17,7 @@ A Next.js-based AI chatbot that integrates with Wazuh SIEM to provide natural la
 
 ## Documentation
 
-📚 **[Installation Guide](docs/INSTALLATION.md)** - Complete setup and deployment instructions
+📚 **[Installation Guide](docs/INSTALLATION.md)** - Complete setup and deployment instructions for Ubuntu/Debian and RedHat-based systems
 👥 **[User Guide](docs/USER_GUIDE.md)** - How to use the chatbot effectively
 ⚙️ **[Administration Guide](docs/ADMINISTRATION_GUIDE.md)** - System administration and maintenance
 🔗 **[Wazuh Integration Guide](docs/WAZUH_INTEGRATION.md)** - Technical integration details
