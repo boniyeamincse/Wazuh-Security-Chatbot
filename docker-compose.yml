@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  wazuh-chatbot:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - WAZUH_API_BASE_URL=https://wazuh-manager:55000
+      - WAZUH_API_USER=api_user
+      - WAZUH_API_PASS=supersecret
+      - LLM_PROVIDER=openai
+      - OPENAI_API_KEY=your_openai_api_key_here
+      - SESSION_SECRET=your_session_secret_here
+      - DATABASE_URL=file:./sqlite.db
+    volumes:
+      - ./sqlite.db:/app/sqlite.db
+    depends_on:
+      - chromadb
+    networks:
+      - wazuh-network
+
+  chromadb:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - chromadb_data:/chroma/chroma
+    networks:
+      - wazuh-network
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    networks:
+      - wazuh-network
+    # Uncomment to pull models on startup (optional)
+    # command: ["ollama", "serve"]
+    # entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 5 && ollama pull llama2 && wait"]
+
+  # Optional: Wazuh manager (uncomment if you want to run locally)
+  # wazuh-manager:
+  #   image: wazuh/wazuh-manager:latest
+  #   ports:
+  #     - "55000:55000"
+  #     - "1514:1514"
+  #     - "1515:1515"
+  #   environment:
+  #     - WAZUH_MANAGER_IP=127.0.0.1
+  #   volumes:
+  #     - wazuh_data:/var/ossec/data
+  #     - wazuh_logs:/var/ossec/logs
+  #   networks:
+  #     - wazuh-network
+
+volumes:
+  chromadb_data:
+  ollama_data:
+  # wazuh_data:
+  # wazuh_logs:
+
+networks:
+  wazuh-network:
+    driver: bridge
