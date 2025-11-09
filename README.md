@@ -2,6 +2,8 @@
 
 A Next.js-based AI chatbot that integrates with Wazuh SIEM to provide natural language querying capabilities for security analysts. Ask questions about alerts, agent status, vulnerabilities, and security events through an intuitive chat interface.
 
+![Main Dashboard](image/main_dashboard.png)
+
 ## Features
 
 - 🤖 **AI-Powered Chat**: Natural language queries about security data using OpenAI GPT or local Ollama models
