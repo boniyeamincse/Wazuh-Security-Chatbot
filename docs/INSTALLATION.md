@@ -12,6 +12,52 @@ Before installing the chatbot, ensure you have the following:
 - **Wazuh Manager**: Version 4.4+ with REST API enabled
 - **Optional**: Docker and Docker Compose for containerized deployment
 
+### Quick Prerequisite Installation
+
+#### Ubuntu/Debian
+```bash
+# Update system
+sudo apt update && sudo apt upgrade -y
+
+# Install Node.js 18+
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Install Docker (optional)
+sudo apt-get install -y docker.io docker-compose
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+#### CentOS/RHEL
+```bash
+# Install Node.js 18+
+curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
+sudo yum install -y nodejs
+
+# Install Docker (optional)
+sudo yum install -y docker docker-compose
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+#### macOS
+```bash
+# Install Node.js 18+ using Homebrew
+brew install node@18
+
+# Install Docker (optional)
+brew install --cask docker
+```
+
+#### Windows
+```powershell
+# Install Node.js 18+ from https://nodejs.org/
+# Install Docker Desktop from https://www.docker.com/products/docker-desktop
+```
+
+> **Note**: All installations above include npm automatically with Node.js. For Docker, you may need to add your user to the docker group: `sudo usermod -aG docker $USER`
+
 ### Wazuh Manager Setup
 1. **Install Wazuh Manager**:
    ```bash
